@@ -16,6 +16,11 @@ public class TestTeacherProject {
         assertEquals("trying to find the maximum in [1,2,4]", 4, Main.findMax(new int[] { 1, 2, 4 }));
     }
 
+    @Test
+    public void test_999_InfiniteLoop_NoTimeout() {
+        while (true) {}
+    }
+
     @Test(timeout = 500)
     public void test_002_FindMaxAllNegative() {
         assertEquals("trying to find the maximum in [-7,-5,-3,-1]", -1, Main.findMax(new int[]{-7, -5, -3, -1}));
